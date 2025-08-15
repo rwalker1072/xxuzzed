@@ -23,7 +23,7 @@
         }
         .logo {
             max-width: 200px;
-            margin-top: 20px; /* Added margin to space it from the button */
+            margin-bottom: 20px;
         }
         .form-group {
             margin: 10px 0;
@@ -55,7 +55,8 @@
 <body>
     <div class="container">
         <h1>Solve anything. Evolve everything.</h1>
-        <h2>Sign Up for xxuzzed</h2>
+        <img src="logo.jpg" alt="xxuzzed Logo" class="logo">
+        <h2>Sign Up</h2>
         <form id="signupForm">
             <div class="form-group">
                 <input type="text" id="xHandle" placeholder="X Handle" required>
@@ -69,21 +70,21 @@
             <button type="submit">Submit</button>
         </form>
         <div id="message"></div>
-        <img src="logo.jpg" alt="xxuzzed Logo" class="logo">
     </div>
 
-<script>
-    document.getElementById('signupForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const xHandle = document.getElementById('xHandle').value;
-        const email = document.getElementById('email').value;
-        
-        // Simple validation
-        if (xHandle && email) {
-            window.location.href = 'https://x.com/xxuzzed';
-        } else {
-            document.getElementById('message').textContent = 'Please fill in required fields.';
-        }
-    });
-</script></body>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const xHandle = document.getElementById('xHandle').value;
+            const email = document.getElementById('email').value;
+            
+            // Simple validation
+            if (xHandle && email) {
+                window.location.href = 'https://x.com/xxuzzed';
+            } else {
+                document.getElementById('message').textContent = 'Please fill in required fields.';
+            }
+        });
+    </script>
+</body>
 </html>
