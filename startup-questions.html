@@ -13,6 +13,7 @@
             min-height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
+            color: #000;
             padding: 20px;
         }
         .container {
@@ -46,12 +47,34 @@
         .tagline {
             margin-top: 40px; /* Added spacing above the tagline at the bottom */
         }
+        a {
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+            .container {
+                background: #000;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+            a {
+                color: #4da3ff;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>100 startup questions to answer</h2>
-        <img src="logo.jpg" alt="xxuzzed Logo" class="logo">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="logo-dark.jpg">
+            <img src="logo.jpg" alt="xxuzzed Logo" class="logo">
+        </picture>
         
         <h3>Vision & Problem (1 – 8)</h3>
         <ol>

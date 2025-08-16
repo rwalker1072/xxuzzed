@@ -13,6 +13,7 @@
             height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
+            color: #000;
         }
         .container {
             text-align: center;
@@ -34,6 +35,8 @@
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
+            background-color: #fff;
+            color: #000;
         }
         button {
             padding: 10px 20px;
@@ -50,12 +53,33 @@
             margin-top: 10px;
             color: green;
         }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+            .container {
+                background: #000;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+            input {
+                background-color: #000;
+                color: #fff;
+                border: 1px solid #555;
+            }
+            #message {
+                color: lightgreen;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Solve anything. Evolve everything.</h1>
-        <img src="logo.jpg" alt="xxuzzed Logo" class="logo">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="logo-dark.jpg">
+            <img src="logo.jpg" alt="xxuzzed Logo" class="logo">
+        </picture>
         <h2>Sign Up</h2>
         <form id="signupForm">
             <div class="form-group">
